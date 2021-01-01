@@ -10,6 +10,15 @@
 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWWV7WXBBF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZWWV7WXBBF');
+    </script>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
