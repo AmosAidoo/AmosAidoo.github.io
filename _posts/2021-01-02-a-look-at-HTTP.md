@@ -1,5 +1,6 @@
 ---
 title: A Look at HTTP
+excerpt: HTTP is an application layer protocol. On a high level, it specifies how a program, known as a client requests for documents such HTML documents, images, videos, e.t.c. from another program, known as a server.
 tags: http networking
 ---
 
