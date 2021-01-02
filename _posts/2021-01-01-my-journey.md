@@ -1,3 +1,6 @@
+---
+tags: about-me my-journey
+---
 I once stumbled upon an article back in 2014 talking about how cool one can do cool stuff with notepad and command prompt. It really caught my attention and I decided to learn more about it. It was about writing windows `.bat` batch scripts to run on command prompt. I wasn't really understanding what was going on so what I used to do was to memorize some scripts from the internet and show them to some of my friends. My favourite was random characters falling with a green background(The Matrix Effect). In that same year, I was preparing to write my [B.E.C.E](https://en.wikipedia.org/wiki/Basic_Education_Certificate_Examination#:~:text=The%20Basic%20Education%20Certificate%20Examination,of%20junior%20high%20school%20education.) exam I gave it a pause to focus on the exam.
 
 <figure>
