@@ -3,6 +3,7 @@ title: A Look at HTTP
 excerpt: HTTP is an application layer protocol. On a high level, it specifies how a program, known as a client requests for documents such HTML documents, images, videos, e.t.c. from another program, known as a server.
 tags: http networking
 ---
+### Introduction
 
 Bro 1: "Yo bro, charley wosop"<br/>
 Bro 2: "Charley adey o, your side?"<br/>
@@ -11,7 +12,12 @@ Bro 2: "Vhim. Today what be the vibe?"<br/>
 Bro 1: "Bro adey want learn coding o. What make I do?"<br/>
 ...
 
-What we just witnessed above is a conversation between two bros (in Ghanaian Pidgin English). This conversation began with the first bro checking up on the second bro and the second bro responded on a good note. He in turn did the same thing which bro 1 also responded to on a good note. From there, bro 1 made an enquiry (and the conversation continues...). We can call this a protocol because at least, this happens almost everytime two guys meet to have a conversation. Now let's move our attention from the two bros to computer networking. In computer networking also, there are protocols that two entities use when communicating with each other. A protocol can be defined as a set of rules defining how data is transmitted between entities within a network. These rules include the order in which data should be send, the format of that data and the actions that should be taken upon the transmission or recepient of the data. There are a number of protocols in networking. Examples are SMTP, UDP, ICMP, HTTP, e.t.c. There are already so many stories that have been told about HTTP but it doesn't hurt for me to retell the story.
+What we just witnessed above is a conversation between two bros (in Ghanaian Pidgin English). This conversation began with the first bro checking up on the second bro and the second bro responded on a good note. He in turn did the same thing which bro 1 also responded to on a good note. From there, bro 1 made an enquiry (and the conversation continues...). We can call this a protocol because at least, this happens almost everytime two guys meet to have a conversation. Now let's move our attention from the two bros to computer networking. In computer networking also, there are protocols that two entities use when communicating with each other. 
+
+### What is a protocol?
+A protocol can be defined as a set of rules defining how data is transmitted between entities within a network. These rules include the order in which data should be send, the format of that data and the actions that should be taken upon the transmission or recepient of the data. There are a number of protocols in networking. Examples are SMTP, UDP, ICMP, HTTP, e.t.c. There are already so many stories that have been told about HTTP but it doesn't hurt for me to retell the story.
+
+### What then is HTTP?
 
 HTTP stands for Hypertext Transfer Protocol. It is an application layer protocol. On a high level, it specifies how a program, known as a client requests for documents such HTML documents, images, videos, e.t.c. from another program, known as a server. In operating system terms, a process is a program in execution. So more accurately, a client process requests for documents from a server process. The internet uses a set of protocols known as the TCP/IP stack. These set of protocols have been grouped into layers(a stack) and the topmost layer, the application layer, is were HTTP resides.
 
@@ -19,6 +25,8 @@ HTTP stands for Hypertext Transfer Protocol. It is an application layer protocol
 	<img src="/assets/images/rect.png" alt="TCP/IP Stack"/>
 	<p align="center">The TCP/IP Stack</p>
 </p>
+
+### TCP/IP
 
 Network applications, together with application layer protocols reside in the application layer. For these applications to exchange information(known as messages) with each other over a network, they use the protocols available to them. The other layers in the TCP/IP stack then assist in getting messages from one system to another. Typically, a process in the application layer sends a message to the Transport Layer through a software interface called a **socket**. The Transport Layer then adds some details to this message and passes the result to the Network Layer. The Network Layer also does the same thing. It adds some more details to the information it received from the Transport Layer and passes the results to the Link Layer. The Link Layer also adds its own and passes the results to the Physical Layer which does the actual transmission of bits through a transmission medium. Here the details each layer adds to the information it receives are known as **headers**. There is a beautiful analogy in [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149) to help with thinking about a process and a socket: *"A process is analogous to a house and its socket is analogous to its door.
 When a process wants to send a message to another process on another host, it shoves
@@ -28,13 +36,16 @@ the door of the destination process. Once the message arrives at the destination
 the message passes through the receiving process’s door (socket), and the receiving
 process then acts on the message."*
 
+### The Transport Layer
 Now let's consider briefly the Transport Layer. This layer contains two protocols, Transmission Control Protocol(TCP) and User Datagram Protocol(UDP). TCP is a connection-oriented protocol since it establishes a connection between the communicating processes whilst UDP is connectionless. HTTP relies on the services of TCP in transmitting messages from one process to another. Therefore, for two communicating process to exchange messages using the HTTP protocol, a TCP connection would first have to be established (this is what is know as the [Three-way Handshake](https://en.wikipedia.org/wiki/Handshaking#TCP_three-way_handshake), a discussion for another day) before the exchange takes place.
 
+
+### HTTP Response Messages
 There are two forms of HTTP messages that are transmitted when a client and a server communicate, which are:
 1. HTTP Request Message
 2. HTTP Response Message
 
-### HTTP Request Message
+#### HTTP Request Message
 The image below shows the structure of an HTTP request message: 
 <p>
 	<img src="/assets/images/request_msg.png" alt="TCP/IP Stack"/>
@@ -56,7 +67,7 @@ Host: 127.0.0.1
 Content-Type: text/plain
 ```
 
-### HTTP Response Message
+#### HTTP Response Message
 The image below shows the structure of an HTTP response message: 
 <p>
 	<img src="/assets/images/response_msg.png" alt="TCP/IP Stack"/>
