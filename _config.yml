@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "Amos Aidoo"
   avatar           : "/assets/images/amos.jpeg"
-  bio              : "I am a backend developer.<br/>I code in Go and Node.js."
+  bio              : "I am a backend developer."
   location         : "Accra, Ghana"
   email            : "aidooamos20@gmail.com"
   links:
