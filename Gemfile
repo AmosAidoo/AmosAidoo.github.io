@@ -2,8 +2,8 @@
 
 source "https://rubygems.org"
 
+gem 'webrick'
+
 gem "kramdown-parser-gfm"
 
-gem "no-style-please"
-
-gemspec
+gem "no-style-please", path: "."
