@@ -25,3 +25,13 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Enable Rouge for syntax highlighting
+highlighter: rouge
+
+# Optional: Enable line numbers in code blocks
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
